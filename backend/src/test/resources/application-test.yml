@@ -1,0 +1,16 @@
+aws:
+  region: us-east-1
+  dynamodb:
+    table-name: test-table
+  sqs:
+    queue-url: test-queue
+  cognito:
+    user-pool-id: test-user-pool
+    issuer-url: https://cognito-idp.test.amazonaws.com/test-user-pool
+
+spring:
+  application:
+    name: expense-tracker-test
+  jackson:
+    date-format: ISO-8601
+    time-zone: UTC 
