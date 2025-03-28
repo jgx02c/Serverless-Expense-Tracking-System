@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: expense-tracker
+  profiles:
+    active: dev
+
+server:
+  port: 8080
+
+aws:
+  region: us-east-1
+  cognito:
+    user-pool-id: ${COGNITO_USER_POOL_ID}
+    client-id: ${COGNITO_CLIENT_ID}
+  dynamodb:
+    table-name: ${DYNAMODB_TABLE_NAME}
+
+logging:
+  level:
+    root: INFO
+    com.expensetracker: DEBUG
+    org.springframework.security: INFO
+    org.springframework.web: INFO 
